@@ -1,0 +1,6 @@
+# Source data (raw drive files, prompts, etc.)
+site/data/drive/
+prompts.md
+Student Engineer Design Portfolio*.pdf
+*.MOV
+.DS_Store
