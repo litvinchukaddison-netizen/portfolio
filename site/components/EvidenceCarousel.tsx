@@ -27,7 +27,31 @@ function EvidenceSlide({ item }: { item: EvidenceItem }) {
     )
   }
 
-  // link
+  // link — if PDF, show inline preview; otherwise show a link card
+  const isPdf = item.src.toLowerCase().endsWith('.pdf')
+
+  if (isPdf) {
+    return (
+      <div className="flex flex-col items-center w-full">
+        <iframe
+          src={item.src}
+          title={item.caption}
+          className="w-full rounded-lg border-0"
+          style={{ height: '480px', backgroundColor: '#1A1A2E' }}
+        />
+        <a
+          href={item.src}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center gap-1.5 text-xs font-mono transition-opacity hover:opacity-100"
+          style={{ color: '#E9CE8A', opacity: 0.7 }}
+        >
+          <ExternalLink size={12} /> Open in new tab
+        </a>
+      </div>
+    )
+  }
+
   return (
     <a
       href={item.src}
@@ -48,7 +72,7 @@ function EvidenceSlide({ item }: { item: EvidenceItem }) {
         className="text-sm font-mono text-center px-6 break-all group-hover:underline"
         style={{ color: '#E9CE8A' }}
       >
-        {item.src}
+        Open file
       </span>
     </a>
   )

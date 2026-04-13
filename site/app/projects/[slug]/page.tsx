@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, Users } from 'lucide-react'
 import { getProject, projects } from '@/data/projects'
 import SectionHeader from '@/components/SectionHeader'
 import StrandBadge from '@/components/StrandBadge'
-import ImageGallery from '@/components/ImageGallery'
+
 
 // Generate static params for all project slugs
 export function generateStaticParams() {
@@ -185,7 +185,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             ))
           )}
         </div>
-        <ImageGallery images={project.design.images} />
       </section>
 
       <hr className="wheat-divider" />

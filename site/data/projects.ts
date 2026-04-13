@@ -59,7 +59,7 @@ export const projects: Project[] = [
           images: [],
           evidenceItems: [
             { type: 'image', src: '/files/projects/praxis1/anti-pairwise/Final Anti-Pairwise.png', caption: 'The anti-pairwise matrix of our top three solutions' },
-            { type: 'image', src: '/files/projects/praxis1/anti-pairwise/First Anti-Pairwise.png', caption: 'The anti-pairwise matrix of our top six solutions' },
+            { type: 'link', src: '/files/projects/praxis1/anti-pairwise/First Anti-Pairwise Results.pdf', caption: 'The anti-pairwise matrix of our top six solutions' },
             { type: 'link', src: '/files/projects/praxis1/anti-pairwise/Anti-Pairwise Comparison Debate Notes.pdf', caption: 'Notes taken from the debate discussions that developed the first anti-pairwise matrix' },
           ],
           citations: [

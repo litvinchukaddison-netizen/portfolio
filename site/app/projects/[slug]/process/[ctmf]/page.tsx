@@ -113,19 +113,6 @@ export default async function CTMFPage({
           title="Supporting Evidence"
           subtitle="Artefacts, outputs, or observations that demonstrate the use of this CTMF."
         />
-        <div className="card mb-6">
-          {ctmf.evidence.startsWith('/*') ? (
-            <p className="placeholder-content" style={{ color: '#ACACC4' }}>{ctmf.evidence}</p>
-          ) : (
-            ctmf.evidence.split('\n\n').map((para, i) => (
-              <p key={i} className={i > 0 ? 'mt-4' : ''} style={{ color: '#ACACC4' }}>
-                {para.split('\n').map((line, j) => (
-                  <span key={j}>{line}{j < para.split('\n').length - 1 && <br />}</span>
-                ))}
-              </p>
-            ))
-          )}
-        </div>
         {/* Evidence carousel */}
         {ctmf.evidenceItems && ctmf.evidenceItems.length > 0 && (
           <EvidenceCarousel items={ctmf.evidenceItems} />
